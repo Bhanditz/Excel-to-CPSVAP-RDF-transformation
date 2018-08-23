@@ -1,0 +1,18 @@
+{ "entities":
+	[
+		{"value": "ca", "label": "hasCompetentAuthority"},
+		{"value": "be", "label": "isGroupedBy"},
+		{"value": "le", "label": "isGroupedBy"},
+		{"value": "cr", "label": "hasCriterion"},
+		{"value": "pr", "label": "serviceProvider"},
+		{"value": "pa", "label": "hasParticipation"},
+		{"value": "ip", "label": "hasInput"},
+		{"value": "ff", "label": "hasFormalFramework"},
+		{"value": "ida", "label": "isDescribedAt"},
+		{"value": "hc", "label": "hasCost"},
+		{"value": "hch", "label": "hasChannel"},
+		{"value": "hcp", "label": "hasContactPoint"},
+		{"value": "fo", "label": "follows"},
+		{"value": "prod", "label": "produces"}
+	]
+}

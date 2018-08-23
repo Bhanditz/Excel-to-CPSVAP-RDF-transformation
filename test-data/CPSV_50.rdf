@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ns1="http://purl.org/vocab/cpsv#"
+	xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:nodeID="PS_0">
+    <rdf:type rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+    <dcterms:identifier>PS_0</dcterms:identifier>
+    <ns1:produces rdf:nodeID="testprod"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="testprod">
+    <rdf:type rdf:resource="http://data.europa.eu/m8g/Output"/>
+    <dcterms:title xml:lang="en">test2</dcterms:title>
+  </rdf:Description>
+</rdf:RDF>
