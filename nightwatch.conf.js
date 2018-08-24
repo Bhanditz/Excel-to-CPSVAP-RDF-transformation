@@ -3,7 +3,7 @@ const SCREENSHOT_PATH = "./screenshots/";
 
 const config = { // we use a nightwatch.conf.js file so we can include comments and helper functions
   "src_folders": [
-    "test"     // we use '/test' as the name of our test directory by default. So 'test/e2e' for 'e2e'.
+    "convertJSONtoRDF"
   ],
   //"custom_commands_path" : "node_modules/nightwatch-custom-commands-assertions/js/commands",
   //"custom_assertions_path" : "node_modules/nightwatch-custom-commands-assertions/js/assertions",
@@ -18,7 +18,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
     "cli_args": {
       "webdriver.chrome.driver" : "",
 	  "webdriver.gecko.driver" : "./node_modules/geckodriver/geckodriver.exe",
-	  "webdriver.firefox.profile" : "nightwatch"
+	  "webdriver.firefox.profile" : "dataTransformation"
     }
   },
   "test_workers" : {"enabled" : false, "workers" : "auto"}, // perform tests in parallel where possible

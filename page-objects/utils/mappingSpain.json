@@ -1,0 +1,225 @@
+{"mappings": [
+	{"ThematicArea": [
+		{
+			"English": [
+				{
+					"value": "Justice", 
+					"label": ""
+				}, {"value": "Citizenship and Nationality", 
+					"label": ""
+				}, {"value": "Health", 
+					"label": "07 - Health"
+				}, {"value": "* Relations between the citizen, company or public employee and the Administration\r\n\r\n* Citizen participation and initiatives", 
+					"label": ""
+				}, {"value": "Pensions", 
+					"label": ""
+				}, {"value": "Environment", 
+					"label": ""
+				}, {"value": "Consumption", 
+					"label": ""
+				}, {"value": "Tourism, Leisure and Free time", 
+					"label": "04.7.3 - Tourism (CS)"
+				}, {"value": "* Tourism, Leisure and Free time\r\n\r\n* Business", 
+					"label": "04.7.3 - Tourism (CS"
+				}, {"value": "Housing and Urban Development", 
+					"label": ""
+				}, {"value": "* Communication \r\n\r\n* Economy, Commerce and Patrimony of the Public Administrations", 
+					"label": "04.6 - Communication"
+				}, {"value": "Energy and Industry", 
+					"label": ""
+				}, {"value": "Business", 
+					"label": ""
+				}, {"value": "Technology, Research and Innovation", 
+					"label": ""
+				}, {"value": "Education and training", 
+					"label": "09 - Education"
+				}, {"value": "Social services and Equality", 
+					"label": ""
+				}, {"value": "* Public Works, traffic and transport\r\n\r\n* Health\r\n\r\n* Business", 
+					"label": "07 - Health"
+				}, {"value": "* Tourism, Leisure and Free time\r\n\r\n* Taxes and other contributions", 
+					"label": "4.7.3 - Tourism (CS)"
+				}, {"value": "Employment and Social Security", 
+					"label": ""
+				}, {"value": "Taxes and other contributions", 
+					"label": ""
+				}
+			]
+		},
+		{
+			"Spanish": [
+				{
+					"value": "Justicia", 
+					"label": ""
+				}, {"value": "Ciudadanía y nacionalidad", 
+					"label": ""
+				}, {"value": "Salud", 
+					"label": "07 - Health"
+				}, {"value": "* Relaciones del ciudadano, empresa o empleado público con la Administración\r\n\r\n* Participación e iniciativa ciudadana", 
+					"label": ""
+				}, {"value": "Pensiones", 
+					"label": ""
+				}, {"value": "Medio ambiente", 
+					"label": ""
+				}, {"value": "Consumo", 
+					"label": ""
+				}, {"value": "Turismo, ocio y tiempo libre", 
+					"label": "04.7.3 - Tourism (CS)"
+				}, {"value": "* Turismo, ocio y tiempo libre\r\n\r\n* Empresas", 
+					"label": "04.7.3 - Tourism (CS"
+				}, {"value": "Vivienda y Urbanismo", 
+					"label": ""
+				}, {"value": "* Comunicación\r\n\r\n* Economía, Comercio y Patrimonio de las Administraciones Públicas", 
+					"label": "04.6 - Communication"
+				}, {"value": "Energía e industria", 
+					"label": ""
+				}, {"value": "Empresas", 
+					"label": ""
+				}, {"value": "Tecnología, Investigación e Innovación", 
+					"label": ""
+				}, {"value": "Educación y formación", 
+					"label": "09 - Education"
+				}, {"value": "Servicios Sociales e Igualdad", 
+					"label": ""
+				}, {"value": "* Obras Públicas, tráfico y transportes\r\n\r\n* Salud\r\n\r\n* Empresas", 
+					"label": "07 - Health"
+				}, {"value": "* Turismo, ocio y tiempo libre\r\n\r\n* Impuestos y otros tributos", 
+					"label": "4.7.3 - Tourism (CS)"
+				}, {"value": "Empleo y Seguridad social", 
+					"label": ""
+				}, {"value": "Impuestos y otros tributos", 
+					"label": ""
+				}
+			]
+		}
+	]
+	},
+	{"SpatialCode": [
+		{
+			"English": [
+				{
+					"value": "ESP",
+					"label": "ESP-Spain"
+				}, {
+					"value": "- no spatial code -",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_ANDAL",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_CANAR",
+					"label": "ESP_LPA-Las Palmas de Gran Canaria"
+				}, {
+					"value": "ESP_CMA_BALEAR",
+					"label": ""
+				}, {
+					"value": "ESP_PR_CANTAB",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_MAD",
+					"label": "ESP_MAD-Madrid"
+				}, {
+					"value": "ESP_CMA_CATAL",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_CASTMANCHA",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_RIJ",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_EXTRAMA",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_MURCIA",
+					"label": "ESP_MJV-Murcia"
+				}, {
+					"value": "N/A",
+					"label": ""
+				},  {
+					"value": "ESP_CMA_ARAGON",
+					"label": ""
+				}
+			],
+			"Spanish": [
+				{
+					"value": "ESP",
+					"label": "ESP-Spain"
+				}, {
+					"value": "- no spatial code -",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_ANDAL",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_CANAR",
+					"label": "ESP_LPA-Las Palmas de Gran Canaria"
+				}, {
+					"value": "ESP_CMA_BALEAR",
+					"label": ""
+				}, {
+					"value": "ESP_PR_CANTAB",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_MAD",
+					"label": "ESP_MAD-Madrid"
+				}, {
+					"value": "ESP_CMA_CATAL",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_CASTMANCHA",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_RIJ",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_EXTRAMA",
+					"label": ""
+				}, {
+					"value": "ESP_CMA_MURCIA",
+					"label": "ESP_MJV-Murcia"
+				}, {
+					"value": "N/A",
+					"label": ""
+				},  {
+					"value": "ESP_CMA_ARAGON",
+					"label": ""
+				}
+			]
+		}
+	]},
+	{"ChannelType": [
+		{
+			"English": [
+				{
+					"value": "Electronic processing",
+					"label": ""
+				}, {
+					"value": "Download and submittion",
+					"label": ""
+				}, {
+					"value": "Downloadable form",
+					"label": ""
+				}, {
+					"value": "Proactive",
+					"label": ""
+				}
+			],
+			"Spanish": [
+				{
+					"value": "Tramitación Electrónica",
+					"label": ""
+				}, {
+					"value": "Descarga y envío",
+					"label": ""
+				}, {
+					"value": "Descarga de formulario",
+					"label": ""
+				}, {
+					"value": "Proactivo",
+					"label": ""
+				}
+			]
+		}
+	]}
+]}

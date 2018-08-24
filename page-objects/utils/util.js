@@ -1,3 +1,4 @@
+var fs = require('fs');
 var langs = require('./Languages.json').languages;
 var codelist = require('./CPSVtemplateWithCodelists.json');
 var entities = require('./Entities.json').entities;
@@ -196,5 +197,49 @@ module.exports = {
 	getRandomHCCurrency: function() {
 		var type = hccurrencies[Math.floor(Math.random() * hccurrencies.length)];
 		return type;
+	},
+	getPublicServiceId: function(data, language, index) {
+		var result = data.English[index].PublicService_id;
+		return result;
+	},
+	getPublicServiceName: function(data, language, index) {
+		var result = data.English[index].PublicService_name;
+		return result;
+	},
+	getPublicServiceDescription: function(data, language, index) {
+		var result = data.English[index].PublicService_description;
+		return result;
+	},
+	getPublicServiceKeywords: function(data, language, index) {
+		var result = data.English[index].PublicService_keywords;
+		result = result.split(", ");
+		return result;
+	},
+	getPublicServiceLanguage: function(data, language, index) {
+		var result = data.English[index].PublicService_language;
+		return result;
+	},
+	getPublicServiceTypeByMapping: function(data, mapping, language, index) {
+		var value = data.English[index].PublicService_type;
+		var result = mapping.find(o => o.value === value).label;
+		return result;
+	},
+	getCompetentAuthorityPrefLabel: function(data, language, index) {
+		var result = data.English[index].PublicOrganization_prefLabel;
+		return result;
+	},
+	getSpatialCodeByMapping: function(data, mapping, language, index) {
+		var value = data.English[index].PublicOrganization_spatialCode;
+		var result = mapping.find(o => o.value === value).label;
+		return result;
+	},
+	getChannelIdentifier: function(data, language, index) {
+		var result = data.English[index].Channel_id;
+		return result;
+	},
+	getChannelTypeByMapping: function(data, mapping, language, index) {
+		var value = data.English[index].Channel_type;
+		var result = mapping.find(o => o.value === value).label;
+		return result;
 	}
-};
+}

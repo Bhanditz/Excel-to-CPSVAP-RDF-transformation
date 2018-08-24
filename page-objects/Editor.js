@@ -1,3 +1,5 @@
+var util = require('util');
+
 module.exports = {
 	url: function() { 
 		return "http://52.50.205.146:8890/rdforms/PSDescriptionCreator.html"; 
@@ -30,11 +32,15 @@ module.exports = {
 			locateStrategy: 'xpath'
 		},
 		ps_keyword: {
-			selector: '(//span[text()="Keyword"])[1]/../../div[2]/div[1]/div[2]/div[1]/input',
+			selector: '(//span[text()="Keyword"])[1]/../../div[2]/div[%d]/div[2]/div[1]/input',
+			locateStrategy: 'xpath'
+		},
+		keyword_click: {
+			selector: '//div[1]/span[1][text() = "Keyword"]/../span[2]',
 			locateStrategy: 'xpath'
 		},
 		ps_keyword_lang: {
-			selector: '(//span[text()="Keyword"])[1]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//span[text()="Keyword"])[1]/../../div[2]/div[%d]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ps_sector: {
@@ -521,17 +527,31 @@ module.exports = {
 		assert_ps_description_lang(value){
 			return this.assert.value('@ps_description_lang', value);
 		},
-		set_ps_keyword(value) {
-			return this.setValue('@ps_keyword', value);
+		set_ps_keyword(value, i) {
+			var element = this.elements['@ps_keyword'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ps_keyword(value){
 			return this.assert.value('@ps_keyword', value);
 		},
-		set_ps_keyword_lang(value) {
-			return this.setValue('@ps_keyword_lang', value);
+		set_ps_keyword_lang(value, i) {
+			var element = this.elements['@ps_keyword_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ps_keyword_lang(value){
 			return this.assert.value('@ps_keyword_lang', value);
+		},
+		expand_ps_keyword() {
+			this.api.execute(function(xpath) {
+				function getElementByXpath(path) {
+					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+				}
+				var res = getElementByXpath(xpath);
+				res.scrollIntoView(true);
+			}, [this.elements.keyword_click.selector]);
+			this.assert.visible('@keyword_click');
+			this.click('@keyword_click');
+			return this;
 		},
 		set_ps_sector(value) {
 			return this.setValue('@ps_sector', value);
