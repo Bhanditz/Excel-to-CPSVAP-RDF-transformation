@@ -1,1 +1,0 @@
-{"identifier":"http://as01tstces:8080/ces-portal/cpsv/PublicServiceType/01/PT","name":"General public services"}
