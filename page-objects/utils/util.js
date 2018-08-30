@@ -198,48 +198,133 @@ module.exports = {
 		var type = hccurrencies[Math.floor(Math.random() * hccurrencies.length)];
 		return type;
 	},
+	getLengthData: function(data, language) {
+		if (language == "English") {
+			var result = data.English.length;
+		} else if (language == "Spanish") {
+			var result = data.Spanish.length;
+		}
+		return result;
+	},
 	getPublicServiceId: function(data, language, index) {
-		var result = data.English[index].PublicService_id;
+		if (language == "English") {
+			var result = data.English[index].PublicService_id;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].PublicService_id;
+		}		
 		return result;
 	},
 	getPublicServiceName: function(data, language, index) {
-		var result = data.English[index].PublicService_name;
+		if (language == "English") {
+			var result = data.English[index].PublicService_name;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].PublicService_name;
+		}
 		return result;
 	},
 	getPublicServiceDescription: function(data, language, index) {
-		var result = data.English[index].PublicService_description;
+		if (language == "English") {
+			var result = data.English[index].PublicService_description;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].PublicService_description;
+		}
 		return result;
 	},
 	getPublicServiceKeywords: function(data, language, index) {
-		var result = data.English[index].PublicService_keywords;
+		if (language == "English") {
+			var result = data.English[index].PublicService_keywords;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].PublicService_keywords;
+		}
 		result = result.split(", ");
 		return result;
 	},
 	getPublicServiceLanguage: function(data, language, index) {
-		var result = data.English[index].PublicService_language;
+		if (language == "English") {
+			var result = data.English[index].PublicService_language;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].PublicService_language;
+		}
 		return result;
 	},
 	getPublicServiceTypeByMapping: function(data, mapping, language, index) {
-		var value = data.English[index].PublicService_type;
-		var result = mapping.find(o => o.value === value).label;
+		if (language == "English") {
+			var value = data.English[index].PublicService_type;
+			var result = mapping.English.find(o => o.value === value).label;
+		} else if (language == "Spanish") {
+			var value = data.Spanish[index].PublicService_type;
+			var result = mapping.Spanish.find(o => o.value === value).label;
+		}
 		return result;
 	},
 	getCompetentAuthorityPrefLabel: function(data, language, index) {
-		var result = data.English[index].PublicOrganization_prefLabel;
+		if (language == "English") {
+			var result = data.English[index].PublicOrganization_prefLabel;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].PublicOrganization_prefLabel;
+		}
 		return result;
 	},
 	getSpatialCodeByMapping: function(data, mapping, language, index) {
-		var value = data.English[index].PublicOrganization_spatialCode;
-		var result = mapping.find(o => o.value === value).label;
+		if (language == "English") {
+			var value = data.English[index].PublicOrganization_spatialCode;
+			var result = mapping.English.find(o => o.value === value).label;
+		} else if (language == "Spanish") {
+			var value = data.Spanish[index].PublicOrganization_spatialCode;
+			var result = mapping.Spanish.find(o => o.value === value).label;
+		}
 		return result;
 	},
 	getChannelIdentifier: function(data, language, index) {
-		var result = data.English[index].Channel_id;
+		if (language == "English") {
+			var result = data.English[index].Channel_id;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].Channel_id;
+		}
 		return result;
 	},
 	getChannelTypeByMapping: function(data, mapping, language, index) {
-		var value = data.English[index].Channel_type;
-		var result = mapping.find(o => o.value === value).label;
+		if (language == "English") {
+			var value = data.English[index].Channel_type;
+			var result = mapping.English.find(o => o.value === value).label;
+		} else if (language == "Spanish") {
+			var value = data.Spanish[index].Channel_type;
+			var result = mapping.Spanish.find(o => o.value === value).label;
+		}
+		return result;
+	},
+	getEventClass: function(data, language, index) {
+		if (language == "English") {
+			var result = data.English[index].Event_class;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].Event_class;
+		}
+		return result;
+	},
+	getEventIdentifier: function(data, language, index) {
+		if (language == "English") {
+			var result = data.English[index].Event_id;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].Event_id;
+		}
+		return result;
+	},
+	getEventName: function(data, language, index) {
+		if (language == "English") {
+			var result = data.English[index].Event_name;
+		} else if (language == "Spanish") {
+			var result = data.Spanish[index].Event_name;
+		}
+		return result;
+	},
+	getEventTypeByMapping: function(data, mapping, language, index) {
+		if (language == "English") {
+			var value = data.English[index].Event_type;
+			var result = mapping.English.find(o => o.value === value).label;
+		} else if (language == "Spanish") {
+			var value = data.Spanish[index].Event_type;
+			var result = mapping.Spanish.find(o => o.value === value).label;
+		}
 		return result;
 	}
 }
