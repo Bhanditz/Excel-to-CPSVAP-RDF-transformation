@@ -19,7 +19,9 @@
     "clean:downloads": "rimraf downloads/*",
     "clean:tmp": "rimraf tmp/*",
     "clean": "run-p clean:reports clean:screenshots clean:downloads clean:tmp",
-    "convert": "node exceljson_Spain.js"
+    "convert": "run-p convertSpain convertPortugal",
+    "convertSpain": "node exceljson_Spain.js",
+    "convertPortugal": "node exceljson_Portugal.js"
   },
   "repository": {
     "type": "git",
