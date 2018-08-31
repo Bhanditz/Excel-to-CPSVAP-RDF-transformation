@@ -63,17 +63,16 @@ module.exports = {
 			if (util.getEventClass(data, languages[i], j) == "Business Event") {
 				editor
 					.be_expand()
-					.set_be_identifier(util.getEventIdentifier(data, languages[i], 0))
-					.set_be_name(util.getEventName(data, languages[i], 0))
+					.set_be_identifier(util.getEventIdentifier(data, languages[i], j))
+					.set_be_name(util.getEventName(data, languages[i], j))
 					.set_be_name_lang(languages[i])
 					.set_be_type(util.getEventTypeByMapping(data, mappingSpain.mappings[3].BusinessEventType[0], languages[i], j));
-
 
 			} else if (util.getEventClass(data, languages[i], j) == "Life Event") {
 				editor
 					.le_expand()
-					.set_le_identifier(util.getEventIdentifier(data, languages[i], 0))
-					.set_le_name(util.getEventName(data, languages[i], 0))
+					.set_le_identifier(util.getEventIdentifier(data, languages[i], j))
+					.set_le_name(util.getEventName(data, languages[i], j))
 					.set_le_name_lang(languages[i])
 					.set_le_type(util.getEventTypeByMapping(data, mappingSpain.mappings[4].LifeEventType[0], languages[i], j));
 
@@ -96,6 +95,9 @@ module.exports = {
 					.saveScreenshot(config.imgpath(browser) + 'rdfdata.png');
 			}
 
+			browser
+				.pause(time_pause);
+
 			rdfdata
 				.download();
 
@@ -106,8 +108,6 @@ module.exports = {
 				browser
 					.saveScreenshot(config.imgpath(browser) + 'rdfdata-download.png');
 			}
-
-			editor.navigate();
 
 			};
 			
