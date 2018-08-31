@@ -12,17 +12,17 @@ glob(glob_jsonlocation, glob_options, function (er, filelist) {
 
   var resultsArray = [];
 
-  for (var i = 1; i < filelist.length; i++) {
+  for (var i = 0; i < filelist.length; i++) {
 
       const result = excelToJson({
           sourceFile: filelist[i],
-          range: 'A1:M2',
           header:{
               // Is the number of rows that will be skipped and will not be present at our result object. Counting from top to bottom
               rows: 1
           },
           sheets: [{
             name: 'Serviços Públicos',
+            range: 'A1:L2',
             columnToKey: {
               A: 'PublicService_id',
               H: 'PublicService_name',
@@ -32,6 +32,7 @@ glob(glob_jsonlocation, glob_options, function (er, filelist) {
           },
           {
             name: 'Âmbito Territorial',
+            range: 'A1:B2',
             columnToKey: {
               B: 'PublicService_spatial'
             }
@@ -50,6 +51,7 @@ glob(glob_jsonlocation, glob_options, function (er, filelist) {
           },
           {
             name: 'Entidades',
+            range: 'A1:C2',
             columnToKey: {
               B: 'PublicOrganization_id'
             }
@@ -117,7 +119,8 @@ glob(glob_jsonlocation, glob_options, function (er, filelist) {
                                             .replace(/\\r/g, "\\r")
                                             .replace(/\\t/g, "\\t")
                                             .replace(/\\b/g, "\\b")
-                                            .replace(/\\f/g, "\\f");
+                                            .replace(/\\f/g, "\\f")
+                                            .replace(/<(?:.|\n)*?>/gm, ' ');
 
       fs.writeFile("./tmp/dataPortugal.json", content, 'utf8', function (err) {
           if (err) {

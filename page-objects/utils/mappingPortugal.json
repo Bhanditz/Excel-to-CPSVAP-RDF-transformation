@@ -1,0 +1,76 @@
+{"mappings": [
+	{"SpatialCode": [
+		{
+			"Portuguese": [
+				{
+					"value": "PT",
+					"label": "PRT-Portugal"
+				}, {
+					"value": "- no spatial code -",
+					"label": ""
+				}, {
+					"value": "",
+					"label": ""
+				}
+			]
+		}
+	]},
+	{"EventClass": [
+		{
+			"Portuguese": [
+				{
+					"value": "Pedir a certidão de nascimento",
+					"label": "Life Event"
+				}, {
+					"value": "Obter informações sobre a pensão social de velhice",
+					"label": "Life Event"
+				}, {
+					"value": "Pedir o Cartão Europeu de Seguro de Doença da Segurança Social",
+					"label": "Life Event"
+				}, {
+					"value": "Pedir o certificado de residência permanente para cidadão da UE/EEE/Suíça",
+					"label": "Life Event"
+				}, {
+					"value": "Alojamento local - cessação da atividade",
+					"label": "Business Event"
+				}, {
+					"value": "Alojamento local - registo da atividade",
+					"label": "Business Event"
+				}, {
+					"value": "Centro de bronzeamento artificial –  exploração de estabelecimento",
+					"label": "Business Event"
+				}, {
+					"value": "Comércio a retalho em grande superfície comercial inserida em conjunto comercial - exploração de estabelecimento",
+					"label": "Business Event"
+				}, {
+					"value": "Feirante ou vendedor ambulante - acesso à atividade",
+					"label": "Business Event"
+				}, {
+					"value": "Manutenção e reparação de veículos automóveis, motociclos e ciclomotores - exploração de oficina" ,
+					"label": "Business Event"
+				}, {
+					"value": "Mediação imobiliária - licença para o exercício da atividade",
+					"label": "Business Event"
+				}, {
+					"value": "Piercings e tatuagens - exploração de estabelecimento",
+					"label": "Business Event"
+				}, {
+					"value": "Realização de saldos - comunicação",
+					"label": "Business Event"
+				}, {
+					"value": "Restauração e bebidas - exploração de estabelecimento",
+					"label": "Business Event"
+				}, {
+					"value": "Alterar morada no Cartão de Cidadão",
+					"label": "Life Event"
+				}, {
+					"value": "Aquicultura - título de atividade aquícola - águas marinhas",
+					"label": "Business Event"
+				}
+
+			]
+		}
+	]}
+]}
+
+

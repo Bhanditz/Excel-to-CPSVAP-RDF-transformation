@@ -91,8 +91,12 @@ module.exports = {
 			selector: '(//span[text()="Requires"])[1]/../../div[2]/div[1]/div[2]/div[1]/input',
 			locateStrategy: 'xpath'
 		},
+		ps_related_click: {
+			selector: '//div[1]/span[1][text() = "Related"]/../span[2]',
+			locateStrategy: 'xpath'
+		},
 		ps_related: {
-			selector: '(//span[text()="Related"])[1]/../../div[2]/div[1]/div[2]/div[1]/input',
+			selector: '(//span[text()="Related"])[1]/../../div[2]/div[%d]/div[2]/div[1]/input',
 			locateStrategy: 'xpath'
 		},
 		ca_identifier: {
@@ -260,27 +264,27 @@ module.exports = {
 			locateStrategy: 'xpath'
 		},
 		ip_click: {
-			selector: '(//span[text() = "HasInput"])[1]/../span[2]',
+			selector: '(//span[text() = "HasInput"])[%d]/../span[2]',
 			locateStrategy: 'xpath'
 		},
 		ip_identifier: {
-			selector: '//div[1]/span[1][text() = "HasInput"]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasInput"])[%d]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ip_name: {
-			selector: '//div[1]/span[1][text() = "HasInput"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasInput"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ip_name_lang: {
-			selector: '//div[1]/span[1][text() = "HasInput"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasInput"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ip_description: {
-			selector: '//div[1]/span[1][text() = "HasInput"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasInput"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ip_description_lang: {
-			selector: '//div[1]/span[1][text() = "HasInput"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasInput"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ip_type: {
@@ -300,27 +304,27 @@ module.exports = {
 			locateStrategy: 'xpath'
 		},
 		ff_click: {
-			selector: '(//span[text() = "HasFormalFramework"])[1]/../span[2]',
+			selector: '(//span[text() = "HasFormalFramework"])[%d]/../span[2]',
 			locateStrategy: 'xpath'
 		},
 		ff_identifier: {
-			selector: '//div[1]/span[1][text() = "HasFormalFramework"]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasFormalFramework"])[%d]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ff_name: {
-			selector: '//div[1]/span[1][text() = "HasFormalFramework"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasFormalFramework"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ff_name_lang: {
-			selector: '//div[1]/span[1][text() = "HasFormalFramework"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasFormalFramework"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ff_description: {
-			selector: '//div[1]/span[1][text() = "HasFormalFramework"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasFormalFramework"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ff_description_lang: {
-			selector: '//div[1]/span[1][text() = "HasFormalFramework"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasFormalFramework"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ff_type: {
@@ -372,27 +376,27 @@ module.exports = {
 			locateStrategy: 'xpath'
 		},
 		fo_click: {
-			selector: '(//span[text() = "Follows"])[1]/../span[2]',
+			selector: '(//span[text() = "Follows"])[%d]/../span[2]',
 			locateStrategy: 'xpath'
 		},
 		fo_identifier: {
-			selector: '//div[1]/span[1][text() = "Follows"]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "Follows"])[%d]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		fo_name: {
-			selector: '//div[1]/span[1][text() = "Follows"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "Follows"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		fo_name_lang: {
-			selector: '//div[1]/span[1][text() = "Follows"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "Follows"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Name"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		fo_description: {
-			selector: '//div[1]/span[1][text() = "Follows"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "Follows"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		fo_description_lang: {
-			selector: '//div[1]/span[1][text() = "Follows"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "Follows"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		fo_type: {
@@ -444,27 +448,27 @@ module.exports = {
 			locateStrategy: 'xpath'
 		},
 		hc_click: {
-			selector: '(//span[text() = "HasCost"])[1]/../span[2]',
+			selector: '(//span[text() = "HasCost"])[%d]/../span[2]',
 			locateStrategy: 'xpath'
 		},
 		hc_identifier: {
-			selector: '//div[1]/span[1][text() = "HasCost"]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasCost"])[%d]/../../div[2]/div[1]/div[1]/div[1]/span[1][text() = "Identifier"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		hc_description: {
-			selector: '//div[1]/span[1][text() = "HasCost"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasCost"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		hc_description_lang: {
-			selector: '//div[1]/span[1][text() = "HasCost"]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasCost"])[%d]/../../div[2]/div[1]/div[2]/div[1]/span[1][text() = "Description"]/../../div[2]/div[1]/div[1]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		hc_value: {
-			selector: '//div[1]/span[1][text() = "HasCost"]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Value"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasCost"])[%d]/../../div[2]/div[1]/div[3]/div[1]/span[1][text() = "Value"]/../../div[2]/div[1]/div[2]/div[1]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		hc_currency: {
-			selector: '//div[1]/span[1][text() = "HasCost"]/../../div[2]/div[1]/div[4]/div[1]/span[1][text() = "Currency"]/../../div[2]/div[1]/div[2]/div[1]/div[3]/input[1]',
+			selector: '(//div[1]/span[1][text() = "HasCost"])[%d]/../../div[2]/div[1]/div[4]/div[1]/span[1][text() = "Currency"]/../../div[2]/div[1]/div[2]/div[1]/div[3]/input[1]',
 			locateStrategy: 'xpath'
 		},
 		ida_click: {
@@ -527,12 +531,22 @@ module.exports = {
 		assert_ps_description_lang(value){
 			return this.assert.value('@ps_description_lang', value);
 		},
+		set_ps_keyword(value) {
+			var i = 1;
+			var element = this.elements['@ps_keyword'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
 		set_ps_keyword(value, i) {
 			var element = this.elements['@ps_keyword'.slice(1)];
 			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ps_keyword(value){
 			return this.assert.value('@ps_keyword', value);
+		},
+		set_ps_keyword_lang(value) {
+			var i = 1;
+			var element = this.elements['@ps_keyword_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		set_ps_keyword_lang(value, i) {
 			var element = this.elements['@ps_keyword_lang'.slice(1)];
@@ -639,8 +653,26 @@ module.exports = {
 		assert_ps_requires(value){
 			return this.assert.value('@ps_requires', value);
 		},
+		expand_ps_related() {
+			this.api.execute(function(xpath) {
+				function getElementByXpath(path) {
+					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+				}
+				var res = getElementByXpath(xpath);
+				res.scrollIntoView(true);
+			}, [this.elements.keyword_click.selector]);
+			this.assert.visible('@ps_related_click');
+			this.click('@ps_related_click');
+			return this;
+		},
 		set_ps_related(value) {
-			return this.setValue('@ps_related', value);
+			var i = 1;
+			var element = this.elements['@ps_related'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ps_related(value, i) {
+			var element = this.elements['@ps_related'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ps_related(value){
 			return this.assert.value('@ps_related', value);
@@ -916,43 +948,89 @@ module.exports = {
 			return this.assert.value('@pa_role_lang', value);
 		},
 		ip_expand() {
+			var i = 1;
 			this.api.execute(function(xpath) {
 				function getElementByXpath(path) {
 					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 				}
 				var res = getElementByXpath(xpath);
 				res.scrollIntoView(true);
-			}, [this.elements.ip_click.selector]);
-			this.assert.visible('@ip_click');
-			this.click('@ip_click');
+			}, [util.format(this.elements['@ip_click'.slice(1)].selector, i)]);
+			var element = this.elements['@ip_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
 			return this;
 		},
 		set_ip_identifier(value) {
 			return this.setValue('@ip_identifier', value);
 		},
+		ip_expand(i) {
+			this.api.execute(function(xpath) {
+				function getElementByXpath(path) {
+					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+				}
+				var res = getElementByXpath(xpath);
+				res.scrollIntoView(true);
+			}, [util.format(this.elements['@ip_click'.slice(1)].selector, i)]);
+			var element = this.elements['@ip_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
+			return this;
+		},
+		set_ip_identifier(value) {
+			var i = 1;
+			var element = this.elements['@ip_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ip_identifier(value, i) {
+			var element = this.elements['@ip_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
 		assert_ip_identifier(value){
 			return this.assert.value('@ip_identifier', value);
 		},
 		set_ip_name(value) {
-			return this.setValue('@ip_name', value);
+			var i = 1;
+			var element = this.elements['@ip_name'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ip_name(value, i) {
+			var element = this.elements['@ip_name'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ip_name(value){
 			return this.assert.value('@ip_name', value);
 		},
 		set_ip_name_lang(value) {
-			return this.setValue('@ip_name_lang', value);
+			var i = 1;
+			var element = this.elements['@ip_name_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ip_name_lang(value, i) {
+			var element = this.elements['@ip_name_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ip_name_lang(value){
 			return this.assert.value('@ip_name_lang', value);
 		},
 		set_ip_description(value) {
-			return this.setValue('@ip_description', value);
+			var i = 1;
+			var element = this.elements['@ip_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ip_description(value, i) {
+			var element = this.elements['@ip_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ip_description(value){
 			return this.assert.value('@ip_description', value);
 		},
 		set_ip_description_lang(value) {
-			return this.setValue('@ip_description_lang', value);
+			var i = 1;
+			var element = this.elements['@ip_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ip_description_lang(value, i) {
+			var element = this.elements['@ip_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ip_description_lang(value){
 			return this.assert.value('@ip_description_lang', value);
@@ -982,43 +1060,86 @@ module.exports = {
 			return this.assert.value('@ip_related', value);
 		},
 		ff_expand() {
+			var i = 1;
 			this.api.execute(function(xpath) {
 				function getElementByXpath(path) {
 					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 				}
 				var res = getElementByXpath(xpath);
 				res.scrollIntoView(true);
-			}, [this.elements.ff_click.selector]);
-			this.assert.visible('@ff_click');
-			this.click('@ff_click');
+			}, [util.format(this.elements['@ff_click'.slice(1)].selector, i)]);
+			var element = this.elements['@ff_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
+			return this;
+		},
+		ff_expand(i) {
+			this.api.execute(function(xpath) {
+				function getElementByXpath(path) {
+					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+				}
+				var res = getElementByXpath(xpath);
+				res.scrollIntoView(true);
+			}, [util.format(this.elements['@ff_click'.slice(1)].selector, i)]);
+			var element = this.elements['@ff_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
 			return this;
 		},
 		set_ff_identifier(value) {
-			return this.setValue('@ff_identifier', value);
+			var i = 1;
+			var element = this.elements['@ff_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ff_identifier(value, i) {
+			var element = this.elements['@ff_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ff_identifier(value){
 			return this.assert.value('@ff_identifier', value);
 		},
 		set_ff_name(value) {
-			return this.setValue('@ff_name', value);
+			var i = 1;
+			var element = this.elements['@ff_name'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ff_name(value, i) {
+			var element = this.elements['@ff_name'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ff_name(value){
 			return this.assert.value('@ff_name', value);
 		},
 		set_ff_name_lang(value) {
-			return this.setValue('@ff_name_lang', value);
+			var i = 1;
+			var element = this.elements['@ff_name_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ff_name_lang(value, i) {
+			var element = this.elements['@ff_name_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ff_name_lang(value){
 			return this.assert.value('@ff_name_lang', value);
 		},
 		set_ff_description(value) {
-			return this.setValue('@ff_description', value);
+			var i = 1;
+			var element = this.elements['@ff_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ff_description(value, i) {
+			var element = this.elements['@ff_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ff_description(value){
 			return this.assert.value('@ff_description', value);
 		},
 		set_ff_description_lang(value) {
-			return this.setValue('@ff_description_lang', value);
+			var i = 1;
+			var element = this.elements['@ff_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_ff_description_lang(value, i) {
+			var element = this.elements['@ff_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_ff_description_lang(value){
 			return this.assert.value('@ff_description_lang', value);
@@ -1102,43 +1223,86 @@ module.exports = {
 			return this.assert.value('@prod_type', value);
 		},
 		fo_expand() {
+			var i = 1;
 			this.api.execute(function(xpath) {
 				function getElementByXpath(path) {
 					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 				}
 				var res = getElementByXpath(xpath);
 				res.scrollIntoView(true);
-			}, [this.elements.fo_click.selector]);
-			this.assert.visible('@fo_click');
-			this.click('@fo_click');
+			}, [util.format(this.elements['@fo_click'.slice(1)].selector, i)]);
+			var element = this.elements['@fo_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
+			return this;
+		},
+		fo_expand(i) {
+			this.api.execute(function(xpath) {
+				function getElementByXpath(path) {
+					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+				}
+				var res = getElementByXpath(xpath);
+				res.scrollIntoView(true);
+			}, [util.format(this.elements['@fo_click'.slice(1)].selector, i)]);
+			var element = this.elements['@fo_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
 			return this;
 		},
 		set_fo_identifier(value) {
-			return this.setValue('@fo_identifier', value);
+			var i = 1;
+			var element = this.elements['@fo_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_fo_identifier(value, i) {
+			var element = this.elements['@fo_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_fo_identifier(value){
 			return this.assert.value('@fo_identifier', value);
 		},
 		set_fo_name(value) {
-			return this.setValue('@fo_name', value);
+			var i = 1;
+			var element = this.elements['@fo_name'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_fo_name(value, i) {
+			var element = this.elements['@fo_name'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_fo_name(value){
 			return this.assert.value('@fo_name', value);
 		},
 		set_fo_name_lang(value) {
-			return this.setValue('@fo_name_lang', value);
+			var i = 1;
+			var element = this.elements['@fo_name_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_fo_name_lang(value, i) {
+			var element = this.elements['@fo_name_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_fo_name_lang(value){
 			return this.assert.value('@fo_name_lang', value);
 		},
 		set_fo_description(value) {
-			return this.setValue('@fo_description', value);
+			var i = 1;
+			var element = this.elements['@fo_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_fo_description(value, i) {
+			var element = this.elements['@fo_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_fo_description(value){
 			return this.assert.value('@fo_description', value);
 		},
 		set_fo_description_lang(value) {
-			return this.setValue('@fo_description_lang', value);
+			var i = 1;
+			var element = this.elements['@fo_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_fo_description_lang(value, i) {
+			var element = this.elements['@fo_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_fo_description_lang(value){
 			return this.assert.value('@fo_description_lang', value);
@@ -1228,43 +1392,86 @@ module.exports = {
 			return this.assert.value('@hch_openinghours', value);
 		},
 		hc_expand() {
+			var i = 1;
 			this.api.execute(function(xpath) {
 				function getElementByXpath(path) {
 					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 				}
 				var res = getElementByXpath(xpath);
 				res.scrollIntoView(true);
-			}, [this.elements.hc_click.selector]);
-			this.assert.visible('@hc_click');
-			this.click('@hc_click');
+			}, [util.format(this.elements['@hc_click'.slice(1)].selector, i)]);
+			var element = this.elements['@hc_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
+			return this;
+		},
+		hc_expand(i) {
+			this.api.execute(function(xpath) {
+				function getElementByXpath(path) {
+					return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+				}
+				var res = getElementByXpath(xpath);
+				res.scrollIntoView(true);
+			}, [util.format(this.elements['@hc_click'.slice(1)].selector, i)]);
+			var element = this.elements['@hc_click'.slice(1)];
+			this.click('xpath', util.format(element.selector, i));
 			return this;
 		},
 		set_hc_identifier(value) {
-			return this.setValue('@hc_identifier', value);
+			var i = 1;
+			var element = this.elements['@hc_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_hc_identifier(value, i) {
+			var element = this.elements['@hc_identifier'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_hc_identifier(value){
 			return this.assert.value('@hc_identifier', value);
 		},
 		set_hc_description(value) {
-			return this.setValue('@hc_description', value);
+			var i = 1;
+			var element = this.elements['@hc_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_hc_description(value, i) {
+			var element = this.elements['@hc_description'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_hc_description(value){
 			return this.assert.value('@hc_description', value);
 		},
 		set_hc_description_lang(value) {
-			return this.setValue('@hc_description_lang', value);
+			var i = 1;
+			var element = this.elements['@hc_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_hc_description_lang(value, i) {
+			var element = this.elements['@hc_description_lang'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_hc_description_lang(value){
 			return this.assert.value('@hc_description_lang', value);
 		},
 		set_hc_value(value) {
-			return this.setValue('@hc_value', value);
+			var i = 1;
+			var element = this.elements['@hc_value'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_hc_value(value, i) {
+			var element = this.elements['@hc_value'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_hc_value(value){
 			return this.assert.value('@hc_value', value);
 		},
 		set_hc_currency(value) {
-			return this.setValue('@hc_currency', value);
+			var i = 1;
+			var element = this.elements['@hc_value'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
+		},
+		set_hc_currency(value, i) {
+			var element = this.elements['@hc_currency'.slice(1)];
+			return this.setValue('xpath', util.format(element.selector, i), value);
 		},
 		assert_hc_currency(value){
 			return this.assert.value('@hc_currency', value);

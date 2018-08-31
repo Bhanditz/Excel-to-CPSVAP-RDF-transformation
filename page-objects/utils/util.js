@@ -203,15 +203,28 @@ module.exports = {
 			var result = data.English.length;
 		} else if (language == "Spanish") {
 			var result = data.Spanish.length;
+		} else if (language == "Portuguese") {
+			var result = data.length;
 		}
 		return result;
 	},
 	getPublicServiceId: function(data, language, index) {
 		if (language == "English") {
 			var result = data.English[index].PublicService_id;
+			if (module.exports.isURL(result) == false) {
+				result = "http://www.publicServiceSpain.es/" + result;
+			}
 		} else if (language == "Spanish") {
 			var result = data.Spanish[index].PublicService_id;
-		}		
+			if (module.exports.isURL(result) == false) {
+				result = "http://www.publicServiceSpain.es/" + result;
+			}
+		} else if (language == "Portuguese") {
+			var result = data[index].PublicService[0].PublicService_id;
+			if (module.exports.isURL(result) == false) {
+				result = "http://www.publicServicePortugal.pt/" + result;
+			}
+		}	
 		return result;
 	},
 	getPublicServiceName: function(data, language, index) {
@@ -219,6 +232,8 @@ module.exports = {
 			var result = data.English[index].PublicService_name;
 		} else if (language == "Spanish") {
 			var result = data.Spanish[index].PublicService_name;
+		} else if (language == "Portuguese") {
+			var result = data[index].PublicService[0].PublicService_name;
 		}
 		return result;
 	},
@@ -227,6 +242,8 @@ module.exports = {
 			var result = data.English[index].PublicService_description;
 		} else if (language == "Spanish") {
 			var result = data.Spanish[index].PublicService_description;
+		} else if (language == "Portuguese") {
+			var result = data[index].PublicService[0].PublicService_description;
 		}
 		return result;
 	},
@@ -272,6 +289,14 @@ module.exports = {
 		} else if (language == "Spanish") {
 			var value = data.Spanish[index].PublicOrganization_spatialCode;
 			var result = mapping.Spanish.find(o => o.value === value).label;
+		} else if (language == "Portuguese") {
+			try {
+				var value = data[index].Spatial[0].PublicService_spatial;
+				var result = mapping.Portuguese.find(o => o.value === value).label;
+			}
+			catch (err) { 
+				var result = "";
+			}
 		}
 		return result;
 	},
@@ -307,13 +332,22 @@ module.exports = {
 		} else if (language == "Spanish") {
 			var result = data.Spanish[index].Event_id;
 		}
+
+		if (String(result) == "undefined") {
+			result = data.Spanish[index].Event_class;
+		}
+
 		return result;
 	},
 	getEventName: function(data, language, index) {
 		if (language == "English") {
-			var result = data.English[index].Event_name;
+				var result = data.English[index].Event_name;
 		} else if (language == "Spanish") {
-			var result = data.Spanish[index].Event_name;
+				var result = data.Spanish[index].Event_name;
+		}
+
+		if (String(result) == "undefined") {
+			result = data.Spanish[index].Event_class
 		}
 		return result;
 	},
@@ -326,5 +360,211 @@ module.exports = {
 			var result = mapping.Spanish.find(o => o.value === value).label;
 		}
 		return result;
+	},
+	getCompotentAuthorityIdentifier: function(data, language, index) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[index].CompetentAuthority[0].PublicOrganization_id;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasInputIdentifier: function(data, language, indexInput, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasInput[indexInput].hasInput_id;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasInputName: function(data, language, indexInput, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasInput[indexInput].hasInput_name;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasInputDescription: function(data, language, indexInput, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasInput[indexInput].hasInput_description;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getFormalFrameworkIdentifier: function(data, language, indexFF, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasFormalFramework[indexFF].hasFormalFramework_id;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getFormalFrameworkName: function(data, language, indexFF, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasFormalFramework[indexFF].hasFormalFramework_name;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getFormalFrameworkDescription: function(data, language, indexFF, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasFormalFramework[indexFF].hasFormalFramework_description;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getFollowsIdentifier: function(data, language, indexF, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].follows[indexF].follows_id;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getFollowsName: function(data, language, indexF, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].follows[indexF].follows_name;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getFollowsDescription: function(data, language, indexF, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].follows[indexF].follows_description;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasCostIdentifier: function(data, language, indexCost, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasCost[indexCost].hasCost_id;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasCostValue: function(data, language, indexCost, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasCost[indexCost].hasCost_value;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasCostDescription: function(data, language, indexCost, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = data[indexPS].hasCost[indexCost].hasCost_description;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getPublicServiceRelated: function(data, language, indexRelated, indexPS) {
+		if (language == "Portuguese") {
+			try {
+				var result = "http://www.publicServicePortugal.pt/" + data[indexPS].related[indexRelated].related_id;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	getHasInputs: function(data, language, index) {
+		if (language == "Portuguese") {
+			var result = data[index].hasInput;
+		}
+		return result;
+	},
+	getFormalFrameworks: function(data, language, index) {
+		if (language == "Portuguese") {
+			var result = data[index].hasFormalFramework;
+		}
+		return result;
+	},
+	getHasCosts: function(data, language, index) {
+		if (language == "Portuguese") {
+			var result = data[index].hasCost;
+		}
+		return result;
+	},
+	getFollows: function(data, language, index) {
+		if (language == "Portuguese") {
+			var result = data[index].follows;
+		}
+		return result;
+	},
+	getRelated: function(data, language, index) {
+		if (language == "Portuguese") {
+			var result = data[index].related;
+		}
+		return result;
+	},
+	getEventClassByMapping: function(data, mapping, language, index) {
+		if (language == "Portuguese") {
+			try {
+				var value = data[index].PublicService[0].PublicService_name;
+				var result = mapping.Portuguese.find(o => o.value === value).label;
+			}
+			catch (err) { 
+				var result = "";
+			}
+		}
+		return result;
+	},
+	isURL: function(str) {
+	  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+	  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name and extension
+	  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+	  '(\\:\\d+)?'+ // port
+	  '(\\/[-a-z\\d%@_.~+&:]*)*'+ // path
+	  '(\\?[;&a-z\\d%@_.,~+&:=-]*)?'+ // query string
+	  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+ 	 return pattern.test(str);
 	}
 }
