@@ -47,15 +47,22 @@ module.exports = {
 			}
 
 			/*Fill the Public Organization information*/
+			var ca_preferredlabel = util.getCompetentAuthorityPrefLabel(data, languages[i], j);
+			var ca_preferredlabel_lang = languages[i];
+			var ca_spatial = util.getSpatialCodeByMapping(data, mappingSpain.mappings[1].SpatialCode[0], languages[i], j);
+			var ca_identifier_tmp = [ca_preferredlabel, ca_preferredlabel_lang, ca_spatial].join('');
+			var caesar = util.caesarCipher(ca_identifier_tmp, 1);
+			var ca_identifier = caesar;
 			editor
-				.set_ca_preferredlabel(util.getCompetentAuthorityPrefLabel(data, languages[i], j))
-				.set_ca_preferredlabel_lang(languages[i])
-				.set_ca_spatial(util.getSpatialCodeByMapping(data, mappingSpain.mappings[1].SpatialCode[0], languages[i], j));
+				.set_ca_identifier(ca_identifier)
+				.set_ca_preferredlabel(ca_preferredlabel)
+				.set_ca_preferredlabel_lang(ca_preferredlabel_lang)
+				.set_ca_spatial(ca_spatial);
 
 			/*Fill the channel*/
 			editor
 				.hch_expand()
-				.set_hch_identifier(util.getChannelIdentifier(data, languages[i], j))
+				.set_hch_identifier(util.escapeSpecialChars(util.getChannelIdentifier(data, languages[i], j)))
 				.set_hch_type(util.getChannelTypeByMapping(data, mappingSpain.mappings[2].ChannelType[0], languages[i], j));
 
 
@@ -75,6 +82,9 @@ module.exports = {
 					.set_le_name(util.getEventName(data, languages[i], j))
 					.set_le_name_lang(languages[i])
 					.set_le_type(util.getEventTypeByMapping(data, mappingSpain.mappings[4].LifeEventType[0], languages[i], j));
+					
+					
+					console.log("*"+ util.getEventIdentifier(data, languages[i], j) + "*");
 
 			}
 

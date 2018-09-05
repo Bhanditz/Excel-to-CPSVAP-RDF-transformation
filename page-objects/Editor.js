@@ -1,4 +1,5 @@
 var util = require('util');
+var utils = require('./utils/util.js');
 
 module.exports = {
 	url: function() { 
@@ -677,8 +678,16 @@ module.exports = {
 		assert_ps_related(value){
 			return this.assert.value('@ps_related', value);
 		},
+		prefixNotURL(value, prefix) {
+			var prefixed = value;
+			if(!utils.isURL(value)){
+				prefixed = prefix + value;
+			}
+			
+			return utils.removespaces(prefixed);
+		},
 		set_ca_identifier(value) {
-			return this.setValue('@ca_identifier', value);
+			return this.setValue('@ca_identifier', this.prefixNotURL(value, "ca/"));
 		},
 		assert_ca_identifier(value){
 			return this.assert.value('@ca_identifier', value);
@@ -732,7 +741,7 @@ module.exports = {
 			return this;
 		},
 		set_be_identifier(value) {
-			return this.setValue('@be_identifier', value);
+			return this.setValue('@be_identifier', this.prefixNotURL(value, "be/"));
 		},
 		assert_be_identifier(value){
 			return this.assert.value('@be_identifier', value);
@@ -786,7 +795,7 @@ module.exports = {
 			return this;
 		},
 		set_le_identifier(value) {
-			return this.setValue('@le_identifier', value);
+			return this.setValue('@le_identifier', this.prefixNotURL(value, "le/"));
 		},
 		assert_le_identifier(value){
 			return this.assert.value('@le_identifier', value);
@@ -840,7 +849,7 @@ module.exports = {
 			return this;
 		},
 		set_cr_identifier(value) {
-			return this.setValue('@cr_identifier', value);
+			return this.setValue('@cr_identifier', this.prefixNotURL(value, "cr/"));
 		},
 		assert_cr_identifier(value){
 			return this.assert.value('@cr_identifier', value);
@@ -882,7 +891,7 @@ module.exports = {
 			return this;
 		},
 		set_pr_identifier(value) {
-			return this.setValue('@pr_identifier', value);
+			return this.setValue('@pr_identifier', this.prefixNotURL(value, "pr/"));
 		},
 		assert_pr_identifier(value){
 			return this.assert.value('@pr_identifier', value);
@@ -918,7 +927,7 @@ module.exports = {
 			return this;
 		},
 		set_pa_identifier(value) {
-			return this.setValue('@pa_identifier', value);
+			return this.setValue('@pa_identifier', this.prefixNotURL(value, "pa/"));
 		},
 		assert_pa_identifier(value){
 			return this.assert.value('@pa_identifier', value);
@@ -961,7 +970,7 @@ module.exports = {
 			return this;
 		},
 		set_ip_identifier(value) {
-			return this.setValue('@ip_identifier', value);
+			return this.setValue('@ip_identifier', this.prefixNotURL(value, "ip/"));
 		},
 		ip_expand(i) {
 			this.api.execute(function(xpath) {
@@ -978,11 +987,11 @@ module.exports = {
 		set_ip_identifier(value) {
 			var i = 1;
 			var element = this.elements['@ip_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "ip/"));
 		},
 		set_ip_identifier(value, i) {
 			var element = this.elements['@ip_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "ip/"));
 		},
 		assert_ip_identifier(value){
 			return this.assert.value('@ip_identifier', value);
@@ -1087,11 +1096,11 @@ module.exports = {
 		set_ff_identifier(value) {
 			var i = 1;
 			var element = this.elements['@ff_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "ff/"));
 		},
 		set_ff_identifier(value, i) {
 			var element = this.elements['@ff_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "ff/"));
 		},
 		assert_ff_identifier(value){
 			return this.assert.value('@ff_identifier', value);
@@ -1187,7 +1196,7 @@ module.exports = {
 			return this;
 		},
 		set_prod_identifier(value) {
-			return this.setValue('@prod_identifier', value);
+			return this.setValue('@prod_identifier', this.prefixNotURL(value, "prod/"));
 		},
 		assert_prod_identifier(value){
 			return this.assert.value('@prod_identifier', value);
@@ -1250,11 +1259,11 @@ module.exports = {
 		set_fo_identifier(value) {
 			var i = 1;
 			var element = this.elements['@fo_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "fo/"));
 		},
 		set_fo_identifier(value, i) {
 			var element = this.elements['@fo_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "fo/"));
 		},
 		assert_fo_identifier(value){
 			return this.assert.value('@fo_identifier', value);
@@ -1338,7 +1347,7 @@ module.exports = {
 			return this;
 		},
 		set_hcp_identifier(value) {
-			return this.setValue('@hcp_identifier', value);
+			return this.setValue('@hcp_identifier', this.prefixNotURL(value, "hcp/"));
 		},
 		assert_hcp_identifier(value){
 			return this.assert.value('@hcp_identifier', value);
@@ -1374,7 +1383,7 @@ module.exports = {
 			return this;
 		},
 		set_hch_identifier(value) {
-			return this.setValue('@hch_identifier', value);
+			return this.setValue('@hch_identifier', this.prefixNotURL(value, "hch/"));
 		},
 		assert_hch_identifier(value){
 			return this.assert.value('@hch_identifier', value);
@@ -1419,11 +1428,11 @@ module.exports = {
 		set_hc_identifier(value) {
 			var i = 1;
 			var element = this.elements['@hc_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "hc/"));
 		},
 		set_hc_identifier(value, i) {
 			var element = this.elements['@hc_identifier'.slice(1)];
-			return this.setValue('xpath', util.format(element.selector, i), value);
+			return this.setValue('xpath', util.format(element.selector, i), this.prefixNotURL(value, "hc/"));
 		},
 		assert_hc_identifier(value){
 			return this.assert.value('@hc_identifier', value);
@@ -1489,7 +1498,7 @@ module.exports = {
 			return this;
 		},
 		set_ida_identifier(value) {
-			return this.setValue('@ida_identifier', value);
+			return this.setValue('@ida_identifier', this.prefixNotURL(value, "ida/"));
 		},
 		assert_ida_identifier(value){
 			return this.assert.value('@ida_identifier', value);

@@ -120,7 +120,8 @@ glob(glob_jsonlocation, glob_options, function (er, filelist) {
                                             .replace(/\\t/g, "\\t")
                                             .replace(/\\b/g, "\\b")
                                             .replace(/\\f/g, "\\f")
-                                            .replace(/<(?:.|\n)*?>/gm, ' ');
+                                            .replace(/<(?:.|\n)*?>/gm, ' ')
+											.replace(/\&nbsp;/g, ' ');
 
       fs.writeFile("./tmp/dataPortugal.json", content, 'utf8', function (err) {
           if (err) {

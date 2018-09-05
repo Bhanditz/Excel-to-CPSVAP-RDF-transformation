@@ -566,5 +566,33 @@ module.exports = {
 	  '(\\?[;&a-z\\d%@_.,~+&:=-]*)?'+ // query string
 	  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
  	 return pattern.test(str);
+	},
+	caesarCipher: function(str, num) {
+		var alphabet = "abcdefghijklmnopqrstuvwxyz";
+		var newStr = "";
+		
+		for (var i = 0; i < str.length; i++) {
+			var chars = str[i],
+				isUpper = chars === chars.toUpperCase() ? true : false;
+			
+			chars = chars.toLowerCase();
+			
+			if (alphabet.indexOf(chars) > -1) {
+				var newIndex = alphabet.indexOf(chars) + num;
+				if(newIndex < alphabet.length) {
+					isUpper ? newStr += alphabet[newIndex].toUpperCase() : newStr += alphabet[newIndex];
+				} else {
+					var shiftedIndex = -(alphabet.length - newIndex);
+					isUpper ? newStr += alphabet[shiftedIndex].toUpperCase() : newStr += alphabet[shiftedIndex];
+				}
+			} else {
+			   newStr += chars;
+			}
+		}
+		return newStr;
+	},
+	removespaces: function(str) {
+		//var pattern = new RegExp('[\s]*','g');
+		return str.replace(/ /g,'');
 	}
 }
