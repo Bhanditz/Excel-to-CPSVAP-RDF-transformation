@@ -7,7 +7,7 @@ const result = excelToJson({
         // Is the number of rows that will be skipped and will not be present at our result object. Counting from top to bottom
         rows: 2
     },
-    sheets: ['ES_PS-en', 'ES_PS-es'],
+    sheets: ['ES_PS-es'],
     columnToKey: {
         B: 'PublicService_id',
         C: 'PublicService_name',
@@ -28,7 +28,6 @@ const result = excelToJson({
 
 const fs = require('fs');
 var content = JSON.stringify(result);
-content = content.replace("ES_PS-en", "English");
 content = content.replace("ES_PS-es", "Spanish");
 content = content.replace(/\\n/g, "\\n")
                                       .replace(/\\'/g, "\\'")

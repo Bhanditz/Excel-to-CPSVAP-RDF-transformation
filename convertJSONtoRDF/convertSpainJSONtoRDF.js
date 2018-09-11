@@ -9,7 +9,7 @@ var data = JSON.parse(JSONdata);
 var download_folder = "downloads/";
 
 var mappingSpain = require('../page-objects/utils/mappingSpain.json');
-var languages = ["English", "Spanish"];
+var languages = ["Spanish"];
 
 var time_pause = 1000;
 var enable_screenshot = false;
